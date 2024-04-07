@@ -1,10 +1,12 @@
-function ProductRow ({ product }){
+function ProductRow ({ name, price, inStock }){
+
     return (
        
       <tr>
         
-        <td>{product.name}</td>
-        <td>{product.price}</td>  
+        <td style={{color: inStock ? "" : "red" }}>{name}</td>
+        <td style={{color: inStock ? "" : "red" }}>{price}</td>  
+
       </tr>
     )
 }

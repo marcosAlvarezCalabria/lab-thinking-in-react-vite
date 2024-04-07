@@ -1,8 +1,9 @@
 import ProductRow from "../product-row/ProductRow";
 
-function ProductTable({products}){
+function ProductTable({searchTerm}){
+  console.log(searchTerm)
     return (
-        <table class="table">
+        <table className="table">
   <thead>
     <tr>
       
@@ -12,9 +13,10 @@ function ProductTable({products}){
     </tr>
   </thead>
   <tbody>
-    {products.map((product)=>{
+    {searchTerm.map((product)=>{
+
         return(
-        <ProductRow product={product}/>
+        <ProductRow key={product.id} {...product}/>
         )
 
     })}
